@@ -1,5 +1,26 @@
 # Carrierwave AWS Storage
 
+## このForkについて
+
+依存関係の解消のためにforkしてgemspecを更新します。
+
+問題となっているcarrierwave-awsの依存は以下です。
+0.4.1
+```
+gem.add_dependency 'carrierwave', '>= 0.7'
+```
+
+0.7.1
+```
+gem.add_dependency 'carrierwave', '~> 0.7'
+```
+
+依存が変わった原因は、意図せずメジャーアップデートされてしまうことを予防するためであり、具体的に何か問題が発生したから変更された訳ではありません。
+https://github.com/sorentwo/carrierwave-aws/pull/22
+
+また、0.7.1と0.4.1では特別修正もないため、gemspecを更新しても影響は大きくないと判断しました。
+https://github.com/sorentwo/carrierwave-aws/compare/v0.4.1...v0.7.1
+
 [![Build Status](https://travis-ci.org/sorentwo/carrierwave-aws.png?branch=master)](https://travis-ci.org/sorentwo/carrierwave-aws)
 [![Code Climate](https://codeclimate.com/github/sorentwo/carrierwave-aws.png)](https://codeclimate.com/github/sorentwo/carrierwave-aws)
 [![Gem Version](https://badge.fury.io/rb/carrierwave-aws.png)](http://badge.fury.io/rb/carrierwave-aws)
